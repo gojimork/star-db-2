@@ -31,6 +31,7 @@ export default class PersonDetails extends Component {
   }
 
   render() {
+    this.swapiService.getAllStarships(3);
     const { person, loading } = this.state;
     if (!person && !loading) return <span>Select a person from a list</span>;
     const spiner = loading ? <Spinner /> : null;
